@@ -5,6 +5,9 @@ import { SiZalo } from "react-icons/si";
 import { IoMdCall, IoMdMail } from "react-icons/io";
 
 const Footer = () => {
+    const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER 
+    const email = process.env.NEXT_PUBLIC_EMAIL;
+
     return (
         <div className=" text-white py-10 px-4 sm:px-10" style={{ backgroundColor: "#232323" }}
         >
@@ -12,7 +15,7 @@ const Footer = () => {
             <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center sm:items-start">
                     <Image 
-                        src="/images/logo.png" 
+                        src="/images/app-logo.jpeg" 
                         alt="PhuTungHD Logo"
                         width={150}
                         height={150}
@@ -27,18 +30,18 @@ const Footer = () => {
                 <div className="flex flex-col items-center sm:items-start">
                     <h3 className="font-bold text-lg mb-4">Liên Kết Nhanh</h3>
                     <ul className="space-y-2">
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Trang Chủ</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Dịch Vụ</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Giới Thiệu</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Liên Hệ</a></li>
+                        <li><a href="/home" className="text-gray-400 hover:text-white transition">Trang Chủ</a></li>
+                        <li><a href="/home/about-us" className="text-gray-400 hover:text-white transition">Về Chúng Tôi</a></li>
+                        <li><a href="/home" className="text-gray-400 hover:text-white transition">Gói Plus</a></li>
+                        <li><a href="/home/contact" className="text-gray-400 hover:text-white transition">Liên Hệ</a></li>
                     </ul>
                 </div>
 
                 {/* Contact Info */}
                 <div className="flex flex-col items-center sm:items-start">
                     <h3 className="font-bold text-lg mb-4">Liên Hệ Với Chúng Tôi</h3>
-                    <p className="text-gray-400 mb-2"><IoMdCall className="inline mr-2" /> +84 036 382 2263</p>
-                    <p className="text-gray-400 mb-4"><IoMdMail className="inline mr-2" /> support@phutunghd.vn</p>
+                    <a href={`tel:${phoneNumber}`} className="text-gray-400 mb-2 cursor-pointer hover:underline"><IoMdCall className="inline mr-2" />033 886 7216</a>
+                    <a href={`mailto:${email}`}className="text-gray-400 mb-4 cursor-pointer hover:underline"><IoMdMail className="inline mr-2" />{email}</a>
                     <div className="flex space-x-4">
                         <a href="#" target="_blank" rel="noopener noreferrer">
                             <FaFacebookMessenger size={30} className="text-gray-400 hover:text-white transition" />

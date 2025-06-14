@@ -45,7 +45,7 @@ const ContactUsSection = () => {
       </div>
 
       {/* Social Links */}
-      <div className="flex justify-center gap-8 sm:gap-16 flex-wrap">
+      <div className="flex justify-center gap-8 sm:gap-30 flex-wrap">
         <div className="text-center hover:text-red-700 hover:scale-110 transition-transform duration-300 cursor-pointer mb-6 sm:mb-0">
           <IoMail size={60} className="text-white hover:text-red-700 mb-5 mx-auto" />
           <p className="font-semibold text-xl">Email</p>

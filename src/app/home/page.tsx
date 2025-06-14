@@ -16,7 +16,6 @@ export default function Home() {
       <ClientsSaySection />
       <PricingSection />
       <ContactUsSection />
-      
 
     </>
   );

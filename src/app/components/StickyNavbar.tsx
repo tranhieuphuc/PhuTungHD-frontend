@@ -11,15 +11,16 @@ const StickyNavbar = () => {
 
     return (
         <nav className="bg-white border-gray-200 fixed w-full md:top-10 md:left-1/10 md:w-2xl lg:left-1/8 lg:w-4xl xl:left-1/8 xl:w-5xl z-50 md:rounded-sm shadow-lg">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-5">
-                <a href="#" className="flex items-center">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between  mx-auto px-4 py-5 gap-0 md:gap-2 lg:gap-4 xl:gap-6">
+                <a href="/home" className="flex items-center rounded-2xl">
                     <Image
-                        src="https://flowbite.com/docs/images/logo.svg"
-                        height={32}
-                        width={32}
-                        alt="Flowbite Logo"
-                    />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-black ms-2">PhuTung HD</span>
+                        src="/images/app-logo.jpeg"
+                        height={52}
+                        width={52}
+                        alt="PhuTungHD Responsive Logo"
+                        className="h-8 w-8 rounded-sm md:h-10 md:w-10 lg:h-12 lg:w-12"
+                    />                  
+                   
                 </a>
 
                 {/* Hamburger button */}
@@ -52,19 +53,17 @@ const StickyNavbar = () => {
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
                         <li>
-                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3" aria-current="page">Home</a>
+                            <a href="/home" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3" aria-current="page">Trang Chủ</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">About</a>
+                            <a href="/home/about-us" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Về Chúng Tôi</a>
+                        </li>
+                  
+                        <li>
+                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Gói Plus</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Services</a>
-                        </li>
-                        <li>
-                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Contact</a>
+                            <a href="/home/contact" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-red-600 md:border-0 md:hover:text-white md:p-3">Liên Hệ</a>
                         </li>
                     </ul>
                 </div>
