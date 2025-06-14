@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeModeScript } from 'flowbite-react';
 import "./globals.css";
+import 'react-loading-skeleton/dist/skeleton.css'
+import { ToastContainer } from 'react-toastify';
+import { Lato } from 'next/font/google';
+ 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const lato = Lato({
+  subsets: ["latin"],  
+  weight: ['400', '700'],
+  
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,12 +24,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressContentEditableWarning>
+    <html lang="en" suppressContentEditableWarning className={lato.className}>
       <head><ThemeModeScript /></head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body        
+        style={{ fontFamily: 'Lato, sans-serif' }}
       >
         {children}
+        <ToastContainer position="top-right"
+          autoClose={3000}          
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light" />
       </body>
     </html>
   );

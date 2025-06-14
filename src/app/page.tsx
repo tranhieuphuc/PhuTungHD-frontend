@@ -1,9 +1,12 @@
-import  UsersTable  from "@/app/components/UsersTable";
+"use client";
+
+import React from "react";
+
 
 export default function Home() {
   return (
-    <div className="container mx-auto py-8">
-    <UsersTable></UsersTable>
-    </div>
+    <>
+   
+    </>
   );
 }
